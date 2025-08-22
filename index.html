@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Hello Page</title>
-    <style>
-        h1 {
-            color: red;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Hello Mateo</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .moving-image {
+      width: 300px; /* Adjust to your image size */
+      animation: moveLeftRight 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes moveLeftRight {
+      0% { transform: translateX(-50px); }
+      100% { transform: translateX(50px); }
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello, my name is Mateo</h1>
-    <img src="sexybean.jpeg" alt="Picture of Mateo" width="1000">
+  <h1>Hello, my name is Mateo</h1>
+  <img src="sexybean.jpeg" alt="Moving Image" class="moving-image">
 </body>
 </html>
